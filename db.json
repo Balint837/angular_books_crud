@@ -1,0 +1,84 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Midnight Library",
+      "author": "Matt Haig",
+      "genre": "Fantasy",
+      "publishedDate": "2020-08-13",
+      "rating": 4.5
+    },
+    {
+      "id": "2",
+      "title": "Where the Crawdads Sing",
+      "author": "Delia Owens",
+      "genre": "Mystery",
+      "publishedDate": "2018-08-14",
+      "rating": 4.8
+    },
+    {
+      "id": "3",
+      "title": "Becoming",
+      "author": "Michelle Obama",
+      "genre": "Biography",
+      "publishedDate": "2018-11-13",
+      "rating": 4.9
+    },
+    {
+      "id": "4",
+      "title": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "genre": "Thriller",
+      "publishedDate": "2019-02-05",
+      "rating": 4.1
+    },
+    {
+      "id": "5",
+      "title": "Educated",
+      "author": "Tara Westover",
+      "genre": "Memoir",
+      "publishedDate": "2018-02-20",
+      "rating": 4.7
+    },
+    {
+      "id": "6",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Classic Literature",
+      "publishedDate": "1925-04-10",
+      "rating": 4.3
+    },
+    {
+      "id": "7",
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "genre": "History",
+      "publishedDate": "2011-01-01",
+      "rating": 4.6
+    },
+    {
+      "id": "8",
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "publishedDate": "1949-06-08",
+      "rating": 4.7
+    },
+    {
+      "id": "9",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "genre": "Young Adult",
+      "publishedDate": "1951-07-16",
+      "rating": 4.0
+    },
+    {
+      "id": "10",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Historical Fiction",
+      "publishedDate": "1960-07-11",
+      "rating": 4.8
+    }
+  ]
+}

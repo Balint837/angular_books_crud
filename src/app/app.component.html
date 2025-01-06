@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4 text-primary">Könyv nyilvántartás</h1>
+  <table class="table table-hover table-bordered shadow-sm">
+    <thead class="bg-light">
+      <tr class="text-center align-middle">
+        <th>
+          <span class="text-success fs-4 cursor-pointer" (click)="createNew()">&#10010;</span>
+        </th>
+        <th>Cím</th>
+        <th>Szerző</th>
+        <th>Műfaj</th>
+        <th>Kiadás</th>
+        <th>Értékelés</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (book of books; track $index) {
+        <tr class="text-center">
+          <td class="align-middle">
+            <span class="text-warning fs-5 me-2 cursor-pointer" (click)="doModify(book)">&#9998;</span>
+            <span class="text-danger fs-5 cursor-pointer" (click)="doDelete(book)">&#10008;</span>
+          </td>
+          <td class="align-middle">{{book.title}}</td>
+          <td class="align-middle">{{book.author}}</td>
+          <td class="align-middle">{{book.genre}}</td>
+          <td class="align-middle">{{book.publishedDate}}</td>
+          <td class="align-middle">{{book.rating}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<app-bookDetails
+  [bookData]="new == undefined ? modify : new"
+  (canceled)="new = undefined; modify = undefined;"
+  (saved)="save($event)"
+></app-bookDetails>

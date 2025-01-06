@@ -1,0 +1,83 @@
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 12px 15px;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.table thead {
+  background-color: #f0f4f7;
+  color: #495057;
+}
+
+.table thead th {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-success,
+.text-warning,
+.text-danger {
+  transition: all 0.3s ease-in-out;
+}
+
+.text-success:hover {
+  color: #28a745;
+}
+
+.text-warning:hover {
+  color: #ffc107;
+}
+
+.text-danger:hover {
+  color: #dc3545;
+}
+
+.fs-4,
+.fs-5 {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid #dee2e6;
+}
+
+
+h1.text-primary {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.app-bookDetails {
+  border-radius: 10px;
+}
+
+.table tbody tr {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.9rem;
+  }
+}

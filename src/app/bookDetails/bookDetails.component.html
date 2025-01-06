@@ -1,0 +1,102 @@
+@if(bookData) {
+  <div class="modal d-block" tabindex="-1" style="background-color: rgba(0, 0, 0, 0.5);" [ngClass]="{'fade-out': isClosing, 'fade-in': !isClosing}">
+    <div class="modal-dialog" [ngClass]="{'fade-out': isClosing, 'grow-out': isClosing, 'fade-in': !isClosing, 'grow-in': !isClosing}">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Adatok rögzítése</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            (click)="closeModal()"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="book_title" class="form-label">Cím</label>
+              <input
+                type="text"
+                class="form-control"
+                id="book_title"
+                [value]="bookData.title"
+                (change)="bookData.title = getvalue($event)"
+                placeholder="Add meg a könyv címét"
+              >
+            </div>
+            <div class="mb-3">
+              <label for="book_author" class="form-label">Szerző</label>
+              <input
+                type="text"
+                class="form-control"
+                id="book_author"
+                [value]="bookData.author"
+                (change)="bookData.author = getvalue($event)"
+                placeholder="Add meg a szerző nevét"
+              >
+            </div>
+            <div class="mb-3">
+              <label for="book_genre" class="form-label">Műfaj</label>
+              <input
+                type="text"
+                class="form-control"
+                id="book_genre"
+                [value]="bookData.genre"
+                (change)="bookData.genre = getvalue($event)"
+                placeholder="Add meg a műfajt"
+              >
+            </div>
+            <div class="mb-3">
+              <label for="category" class="form-label">Kategória</label>
+              <select
+                class="form-select"
+                id="category"
+                [value]="bookData.genre"
+                (change)="bookData.genre = getvalue($event)"
+              >
+                @for (item of ['Science Fiction', 'Fantasy', 'Mystery', 'Thriller', 'Horror', 'Romance', 'Historical Fiction', 'Contemporary Fiction', 'Biography', 'Memoir', 'Self-Help', 'Health & Wellness', 'Travel', 'True Crime', 'Science', 'History', 'Poetry', 'Drama', 'Classic Literature', 'Graphic Novel', 'Young Adult (YA)', 'Childrens Literature']; track $index) {
+                  <option [value]="item">{{item}}</option>
+                }
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="book_publishedDate" class="form-label">Kiadás</label>
+              <input
+                type="date"
+                class="form-control"
+                id="book_publishedDate"
+                [value]="bookData.publishedDate"
+                (change)="bookData.publishedDate = getvalue($event)"
+              >
+            </div>
+            <div class="mb-3">
+              <label for="book_rating" class="form-label">Értékelés</label>
+              <input
+                type="number"
+                class="form-control"
+                id="book_rating"
+                min="0"
+                max="5"
+                step="0.1"
+                [value]="bookData.rating"
+                (change)="bookData.rating = getNumberValue($event)"
+              >
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-bs-dismiss="modal"
+            (click)="closeModal()"
+          >
+            Mégsem
+          </button>
+          <button type="button" class="btn btn-success" (click)="save()">Mentés</button>
+        </div>
+      </div>
+    </div>
+  </div>
+}
